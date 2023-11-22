@@ -64,19 +64,16 @@ class BedrockEmbedding(BaseEmbedding):
             warnings.warn(
                 "AWS_ACCESS_KEY_ID not found. Set environment variable AWS_ACCESS_KEY_ID or set aws_access_key_id"
             )
-            assert aws_access_key_id is not None
 
         if aws_secret_access_key is None:
             warnings.warn(
                 "AWS_SECRET_ACCESS_KEY not found. Set environment variable AWS_SECRET_ACCESS_KEY or set aws_secret_access_key"
             )
-            assert aws_secret_access_key is not None
 
         if aws_session_token is None:
             warnings.warn(
                 "AWS_SESSION_TOKEN not found. Set environment variable AWS_SESSION_TOKEN or set aws_session_token"
             )
-            assert aws_session_token is not None
 
         session_kwargs = {
             "profile_name": aws_profile,
